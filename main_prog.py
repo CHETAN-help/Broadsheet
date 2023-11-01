@@ -1,5 +1,5 @@
-import pickle
-import os
+import pickle,os
+
 def write_rec():
     rec=student()
     file=open("stud.dat","ab")
@@ -69,18 +69,10 @@ class student(object):
         print('''Roll_no    Name      Physics    Chemistry      Maths      Computer    English       Total       Per     Grade  ''')
         print("%-8s"%s.roll,"%-10s"%s.name,"%-10s"%s.physics,"%-12s"%s.chemistry,"%-10s"%s.maths,
                                     "%-10s"%s.computer,"%-12s"%s.english,"%-10s"%s.total,"%-10s"%s.per,"%-5s"%s.grade)
-
-
-
-
     def display_rec(s):
         print("%-8s"%s.roll,"%-10s"%s.name,"%-10s"%s.physics,"%-12s"%s.chemistry,"%-10s"%s.maths,
                                  "%-10s"%s.computer,"%-12s"%s.english,"%-10s"%s.total,"%-10s"%s.per,"%-5s"%s.grade)
         
-
-
-
-
     def modify_rec(s):
         s.roll=int(input("Enter new roll no : "))
         s.name=input("Enter new name : ")
@@ -91,10 +83,6 @@ class student(object):
         s.computer=float(input("Enter new marks of computer : "))
         s.english=float(input("Enter new marks of english : "))
         
-
-
-
-
 def search_roll():
     os.system("clear")
     try:
